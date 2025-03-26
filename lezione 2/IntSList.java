@@ -65,6 +65,14 @@ public class IntSList {
             return cdr().listRef(k-1);
         }
     }
+ /* list append */
+    public IntSList append(IntSList t){
+        if (this.isNull()){
+            return t;
+        } else {
+            return cdr().append(t).cons(car());
+        }
+    }
 
     /* Rappresentazione in stringa della lista */
     public String toString() {
