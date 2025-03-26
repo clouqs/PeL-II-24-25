@@ -73,6 +73,16 @@ public class IntSList {
             return cdr().append(t).cons(car());
         }
     }
+    /*list reverse */
+    public IntSList reverse(){
+        IntSList rev = NULL_INTLIST;
+        IntSList s = this;
+        while (!s.isNull()){
+            rev = rev.cons(s.car());
+            s = s.cdr();
+        }
+        return rev;
+    }
 
     /* Rappresentazione in stringa della lista */
     public String toString() {
