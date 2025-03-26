@@ -46,6 +46,26 @@ public class IntSList {
         return new IntSList(e, this);
     }
 
+    /*calcolo lunghezza  */
+    public int length(){
+        int len = 0;
+        IntSList r = this;
+        while (!r.isNull()){
+            len++;
+            r = r.cdr();
+        }
+        return len;
+    }
+
+    /*list ref - esercizio */
+    public int listRef(int k){
+        if (k == 0){
+            return car();
+        } else {
+            return cdr().listRef(k-1);
+        }
+    }
+
     /* Rappresentazione in stringa della lista */
     public String toString() {
         if (this.isNull()) {
