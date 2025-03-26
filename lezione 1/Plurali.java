@@ -7,7 +7,7 @@ boolean
 */
 
 /*tipi di oggetti:
- * < oggetto > < operazione > < (< list di argomenti >)
+  < oggetto > < operazione > < (< list di argomenti >)
  
  String s, t ...
 
